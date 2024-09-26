@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savings Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator">
+        <h1>Savings Calculator</h1>
+        <div class="input-group">
+            <label for="currency">Currency:</label>
+            <select id="currency">
+                <option value="$">USD ($) - US Dollar</option>
+                <option value="€">EUR (€) - Euro</option>
+                <option value="£">GBP (£) - British Pound</option>
+                <option value="¥">JPY (¥) - Japanese Yen</option>
+                <option value="A$">AUD (A$) - Australian Dollar</option>
+                <option value="C$">CAD (C$) - Canadian Dollar</option>
+                <option value="CHF">CHF - Swiss Franc</option>
+                <option value="CN¥">CNY (CN¥) - Chinese Yuan</option>
+                <option value="HK$">HKD (HK$) - Hong Kong Dollar</option>
+                <option value="NZ$">NZD (NZ$) - New Zealand Dollar</option>
+                <option value="kr">SEK (kr) - Swedish Krona</option>
+                <option value="₩">KRW (₩) - South Korean Won</option>
+                <option value="₹">INR (₹) - Indian Rupee</option>
+                <option value="R$">BRL (R$) - Brazilian Real</option>
+                <option value="R">ZAR (R) - South African Rand</option>
+                <option value="₽">RUB (₽) - Russian Ruble</option>
+                <option value="₺">TRY (₺) - Turkish Lira</option>
+                <option value="Mex$">MXN (Mex$) - Mexican Peso</option>
+                <option value="S$">SGD (S$) - Singapore Dollar</option>
+                <option value="₱">PHP (₱) - Philippine Peso</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <label for="initial">Initial Amount:</label>
+            <input type="number" id="initial" min="0" step="0.01">
+        </div>
+        <div class="input-group">
+            <label for="monthly">Monthly Contribution:</label>
+            <input type="number" id="monthly" min="0" step="0.01">
+        </div>
+        <div class="input-group">
+            <label for="interest">Annual Interest Rate (%):</label>
+            <input type="number" id="interest" min="0" max="100" step="0.1">
+        </div>
+        <div class="input-group">
+            <label for="years">Number of Years:</label>
+            <input type="number" id="years" min="1" step="1">
+        </div>
+        <button id="calculate">Calculate</button>
+        <div id="result"></div>
+    </div>
+    <button id="settings-btn">Settings</button>
+    <div id="settings-modal" class="modal">
+        <div class="modal-content">
+            <h2>Color Scheme</h2>
+            <div class="color-option">
+                <input type="radio" id="light" name="theme" value="light" checked>
+                <label for="light">Light</label>
+            </div>
+            <div class="color-option">
+                <input type="radio" id="dark" name="theme" value="dark">
+                <label for="dark">Dark</label>
+            </div>
+            <button id="close-settings">Close</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
